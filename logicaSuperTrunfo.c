@@ -87,6 +87,8 @@ int main()
 
     printf("Carta 1 - %s: %d\n", nomeDaCidade1, populacao1);
     printf("Carta 2 - %s: %d\n", nomeDaCidade1, populacao2);
+
+    //estrutura condicional
     if (populacao1 > populacao2)
     {
         printf("Resultado: Carta 1 (%s) Venceu!!\n)", nomeDaCidade1);

@@ -9,10 +9,19 @@ int main()
     int populacao1, populacao2;
     double area1, area2;
     double pib1, pib2;
+    int opcaoJogador;
 
     int pontosTuristicos1, pontosTuristicos2;
 
-    printf("\nBem-vindo ao Super Trunfo!!! \n\n");
+    printf("\n#### Bem-vindo ao Super Trunfo!!! ####\n\n");
+
+    printf("\n#### Selecone o atributo de comparação das cartas ####\n\n");
+    printf("*[1] População.\n");
+    printf("*[2] Areá.\n");
+    printf("*[3] PIB.\n");
+    printf("*[4] Número de pontos turísticos.\n");
+    printf("*[5] Densidade demográfica.\n");
+    scanf("%d", &opcaoJogador);
 
     /* Primeira carta */
     printf("Cadastre a primeira carta: \n\n");
@@ -83,19 +92,111 @@ int main()
     /* Exibição de resultado */
     printf("\n================= RESULTADO =================\n");
 
-    printf("\nComparação de cartas (Atributo: População):\n\n");
-
-    printf("Carta 1 - %s: %d\n", nomeDaCidade1, populacao1);
-    printf("Carta 2 - %s: %d\n", nomeDaCidade1, populacao2);
-
-    //estrutura condicional
-    if (populacao1 > populacao2)
+    // opções de comparação
+    switch (opcaoJogador)
     {
-        printf("Resultado: Carta 1 (%s) Venceu!!\n)", nomeDaCidade1);
-    }
-    else
-    {
-        printf("Resultado: Carta 2 (%s) Venceu!!\n", nomeDaCidade2);
+    case 1:
+        printf("\nComparação de cartas (Atributo: População):\n\n");
+
+        printf("Carta 1 - %s: %d\n", nomeDaCidade1, populacao1);
+        printf("Carta 2 - %s: %d\n", nomeDaCidade2, populacao2);
+
+        // estrutura condicional
+        if (populacao1 > populacao2)
+        {
+            printf("Resultado: Carta 1 (%s) Venceu!!\n)", nomeDaCidade1);
+        }
+        else if (populacao1 = populacao2)
+        {
+            printf("Resultado: Carta 1 (%s) e Carta 2 (%s) Empataram!!! \n)", nomeDaCidade1, nomeDaCidade2);
+        }
+        else
+        {
+            printf("Resultado: Carta 2 (%s) Venceu!!\n", nomeDaCidade2);
+        }
+        break;
+    case 2:
+        printf("\nComparação de cartas (Atributo: Área):\n\n");
+
+        printf("Carta 1 - %s: %d\n", nomeDaCidade1, area1);
+        printf("Carta 2 - %s: %d\n", nomeDaCidade2, area2);
+
+        // estrutura condicional
+        if (area1 > area1)
+        {
+            printf("Resultado: Carta 1 (%s) Venceu!!\n)", nomeDaCidade1);
+        }
+        else if (area1 = area2)
+        {
+            printf("Resultado: Carta 1 (%s) e Carta 2 (%s) Empataram!!! \n)", nomeDaCidade1, nomeDaCidade2);
+        }
+        else
+        {
+            printf("Resultado: Carta 2 (%s) Venceu!!\n", nomeDaCidade2);
+        }
+        break;
+    case 3:
+        printf("\nComparação de cartas (Atributo: PIB):\n\n");
+
+        printf("Carta 1 - %s: %d\n", nomeDaCidade1, pib1);
+        printf("Carta 2 - %s: %d\n", nomeDaCidade2, pib2);
+
+        // estrutura condicional
+        if (pib1 > pib2)
+        {
+            printf("Resultado: Carta 1 (%s) Venceu!!\n)", nomeDaCidade1);
+        }
+        else if (pib1 = pib2)
+        {
+            printf("Resultado: Carta 1 (%s) e Carta 2 (%s) Empataram!!! \n)", nomeDaCidade1, nomeDaCidade2);
+        }
+        else
+        {
+            printf("Resultado: Carta 2 (%s) Venceu!!\n", nomeDaCidade2);
+        }
+        break;
+    case 4:
+        printf("\nComparação de cartas (Atributo: Número de pontos turísticos):\n\n");
+
+        printf("Carta 1 - %s: %d\n", nomeDaCidade1, pontosTuristicos1);
+        printf("Carta 2 - %s: %d\n", nomeDaCidade2, pontosTuristicos2);
+
+        // estrutura condicional
+        if (pontosTuristicos1 > pontosTuristicos2)
+        {
+            printf("Resultado: Carta 1 (%s) Venceu!!\n)", nomeDaCidade1);
+        }
+        else if (pontosTuristicos1 = pontosTuristicos2)
+        {
+            printf("Resultado: Carta 1 (%s) e Carta 2 (%s) Empataram!!! \n)", nomeDaCidade1, nomeDaCidade2);
+        }
+        else
+        {
+            printf("Resultado: Carta 2 (%s) Venceu!!\n", nomeDaCidade2);
+        }
+        break;
+    case 5:
+        printf("\nComparação de cartas (Atributo: Densidade demográfica):\n\n");
+
+        printf("Carta 1 - %s: %d\n", nomeDaCidade1, densidadePopulacional1);
+        printf("Carta 2 - %s: %d\n", nomeDaCidade2, densidadePopulacional2);
+
+        // estrutura condicional
+        if (densidadePopulacional1 < densidadePopulacional2)
+        {
+            printf("Resultado: Carta 1 (%s) Venceu!!\n)", nomeDaCidade1);
+        }
+        else if (densidadePopulacional1 = densidadePopulacional2)
+        {
+            printf("Resultado: Carta 1 (%s) e Carta 2 (%s) Empataram!!! \n)", nomeDaCidade1, nomeDaCidade2);
+        }
+        else
+        {
+            printf("Resultado: Carta 2 (%s) Venceu!!\n", nomeDaCidade2);
+        }
+        break;
+    default:
+        break;
     }
 
     printf("\n==========================================\n");
